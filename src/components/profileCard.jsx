@@ -1,3 +1,4 @@
+import "./profileCard.css";
 export function ProfileCard(props) {
   return (
     <div className="card">
