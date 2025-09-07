@@ -1,14 +1,25 @@
 html {
   font-size: 16px;
   height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
+
+h2,
+h5 {
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+
 .mainContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #f0f0f0;
-  height: 100vh;
 }
 
 .profileCardContainer {
@@ -24,8 +35,6 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 1rem;
-  background-image: linear-gradient(to bottom, #18213f, #963ea9);
-  border-radius: 10px;
-  box-shadow: -40px 60px 150px 0 rgba(59, 38, 123, 0.7);
+  align-items: center;
+  height: 100vh;
 }

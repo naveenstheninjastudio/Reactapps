@@ -4,8 +4,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: auto;
   color: #ffffff;
+  padding: 1rem;
+  margin: 1rem;
+  background-image: linear-gradient(to bottom, #18213f, #963ea9);
+  border-radius: 10px;
+  box-shadow: -40px 60px 150px 0 rgba(59, 38, 123, 0.7);
 }
 
 .weatherSearchBar {
@@ -13,7 +17,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-
   /* background-color: #4d5156; */
   border-radius: 999px;
   border: 0.7px solid #f7cbfd;
@@ -34,9 +37,11 @@
   font-size: 1rem;
   border: none;
   outline: none;
+  flex: 14;
 }
 
 .weatherSearchButton {
+  flex: 1;
   width: 2rem;
   margin-right: 0.25rem;
   border: none;
@@ -75,4 +80,8 @@
   /* justify-content: center; */
   align-items: flex-start;
   padding: 0.25rem;
+}
+
+.weatherTime {
+  font-weight: 200;
 }

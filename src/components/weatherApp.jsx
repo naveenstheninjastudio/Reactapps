@@ -52,6 +52,8 @@ export function WeatherApp() {
           <div className="weatherTime">{weatherData?.current.last_updated}</div>
           <div className="weatherTemperature">
             <h2>{weatherData?.current.temp_c}°C</h2>
+            <h2>{weatherData?.location.name}</h2>
+            <h5>{weatherData?.location.region}</h5>
           </div>
         </div>
         <div className="weather">
