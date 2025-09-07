@@ -1,3 +1,82 @@
+html {
+  font-size: 16px;
+  height: 100%;
+  overflow: hidden;
+}
 .weatherApp {
-  color: #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  color: #ffffff;
+}
+
+.weatherSearchBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  /* background-color: #4d5156; */
+  border-radius: 999px;
+  border: 0.7px solid #f7cbfd;
+}
+.weatherSearchBarForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+}
+
+#cityInput {
+  display: flex;
+  align-items: center;
+  background-color: transparent !important;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+.weatherSearchButton {
+  width: 2rem;
+  margin-right: 0.25rem;
+  border: none;
+  background-color: transparent !important;
+}
+
+.weatherSearchButton img {
+  width: 1.5rem;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 0.3rem;
+  opacity: 0.8;
+}
+.weatherIcon {
+  padding-top: 1rem;
+}
+
+.weatherIcon img {
+  padding: 0.25rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.weatherDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.weatherStatus {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: flex-start;
+  padding: 0.25rem;
 }

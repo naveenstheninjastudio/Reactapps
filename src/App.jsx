@@ -10,11 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />}></Route>
-          <Route
-            path="/profile-card-page"
-            element={<ProfileCardPage />}
-          ></Route>
-          <Route path="/weather-app-page" element={<WeatherAppPage />}></Route>
+          <Route path="/profile-card" element={<ProfileCardPage />}></Route>
+          <Route path="/weather-app" element={<WeatherAppPage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

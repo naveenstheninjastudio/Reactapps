@@ -7,20 +7,17 @@ export function WeatherApp() {
   const [cityInputValue, setCityInputValue] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   useEffect(() => {
-    console.log(`useEffect started working`);
     (async () => {
       try {
         const response = await fetch(
           `https://api.weatherapi.com/v1/current.json?key=a373ab1972cd47729bd172808250409&q=${city}&aqi=no`,
           { method: "GET" }
         );
-        console.log(`fetching.....`);
         if (response.status !== 200) {
           throw new Error(`Something went wrong`);
         }
         const weatherData = await response.json();
         setWeatherData(weatherData);
-        <p>weatherdata={weatherData}</p>;
       } catch (error) {
         console.log(error);
       }
@@ -30,36 +27,44 @@ export function WeatherApp() {
   return (
     <div className="weatherApp">
       <div className="weatherSearchBar">
-        <form>
+        <form className="weatherSearchBarForm">
           <input
             type="text"
-            placeholder="city"
+            placeholder="city, state"
             id="cityInput"
             onChange={(e) => setCityInputValue(e.target.value)}
           />
 
-          <button type="button" onClick={() => setCity(cityInputValue)}>
+          <button
+            className="weatherSearchButton"
+            type="button"
+            onClick={() => setCity(cityInputValue)}
+          >
             <img src={searchsvg} />
           </button>
-          <p>Selected city: {city}</p>
         </form>
       </div>
-
+      <div className="weatherIcon">
+        <img src={weatherData?.current.condition.icon} alt="weatherIcon" />
+      </div>
       <div className="weatherDisplay">
         <div className="weatherStatus">
-          <div className="weatherTime">now</div>
+          <div className="weatherTime">{weatherData?.current.last_updated}</div>
           <div className="weatherTemperature">
-            <h2>{weatherData?.current.temp_c}</h2>
-            <img src={weatherData?.current.condition.icon} alt="weatherIcon" />
+            <h2>{weatherData?.current.temp_c}°C</h2>
           </div>
         </div>
         <div className="weather">
-          <div className="weatherDescription"></div>
-          <div></div>
+          <div className="weatherDescription">
+            {weatherData?.current.condition.text}
+          </div>
+          <div className="weatherStats">
+            <p>precip: {weatherData?.current.precip_mm}mm</p>
+            <p>humidity: {weatherData?.current.humidity}</p>
+            <p>wind: {weatherData?.current.wind_kph}kph</p>
+          </div>
         </div>
       </div>
-
-      <div className="weatherContent"></div>
     </div>
   );
 }

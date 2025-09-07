@@ -5,14 +5,13 @@
 
 html {
   font-size: 16px;
+  overflow: hidden;
 }
 .mainContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  padding: 0 1rem;
   background-color: #f0f0f0;
 }
 
@@ -22,4 +21,13 @@ html {
   justify-content: center;
   flex-wrap: wrap;
   padding: 1rem;
+}
+.weatherAppContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+  background-image: linear-gradient(to bottom, #18213f, #963ea9);
+  border-radius: 10px;
+  box-shadow: -40px 60px 150px 0 rgba(59, 38, 123, 0.7);
 }
