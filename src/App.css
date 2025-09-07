@@ -5,7 +5,7 @@
 
 html {
   font-size: 16px;
-  overflow: hidden;
+  height: 100%;
 }
 .mainContainer {
   display: flex;
