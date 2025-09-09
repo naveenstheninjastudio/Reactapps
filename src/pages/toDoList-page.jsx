@@ -29,13 +29,17 @@ export function ToDoListAppPage() {
       <div className="toDoListApp">
         <div className="toDoTitle">my list</div>
         <div className="toDoTaskListContainer">
-          {tasks.map((item) => (
-            <ToDoListApp
-              key={item?.id}
-              {...item}
-              toggleTask={() => toggleTask(item.id)}
-            />
-          ))}
+          {tasks.length === 0 ? (
+            <div className="emptyTaskList">No tasks yet!!</div>
+          ) : (
+            tasks.map((item) => (
+              <ToDoListApp
+                key={item?.id}
+                {...item}
+                toggleTask={() => toggleTask(item.id)}
+              />
+            ))
+          )}
         </div>
         <form className="toDoInputForm">
           <input

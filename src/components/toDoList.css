@@ -35,6 +35,7 @@
   justify-content: center;
   font-size: 2rem;
   text-transform: capitalize;
+  margin-bottom: 1rem;
 }
 
 .toDoInputForm {
@@ -51,6 +52,12 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.toDoTaskListContainer .emptyTaskList {
+  display: flex;
+  justify-content: center;
+  font-weight: 200;
+}
+
 .toDoTaskList {
   display: flex;
   flex-direction: column;
