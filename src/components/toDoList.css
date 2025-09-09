@@ -43,12 +43,23 @@
   justify-content: center;
   padding: 2rem 2rem 0 2rem;
 }
-
+.toDoTaskListContainer {
+  display: flex;
+  flex-direction: column;
+  max-height: 25vh;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .toDoTaskList {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0.25rem 0.5rem;
+}
+.toDoTask.done {
+  text-decoration: line-through;
+  color: #e5e5e5;
 }
 .toDoTaskBorder {
   width: 100%;
@@ -58,14 +69,20 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 0.25rem;
 }
 
 .toDoDescription {
-  margin-left: 1.3rem;
+  margin-left: 1.7rem;
   font-size: 0.8rem;
   font-weight: 200;
+  padding: 0.25rem 0;
 }
 
+.toDoDescription.done {
+  text-decoration: line-through;
+  color: #e5e5e5;
+}
 #taskInput {
   background-color: rgba(255, 255, 255, 0.07);
   color: #ffffff;
@@ -74,6 +91,7 @@
   outline: none;
   margin-bottom: 0.8rem;
   height: 2rem;
+  padding: 0.25rem;
 }
 
 #taskInput ::placeholder {
@@ -88,8 +106,9 @@
   border-radius: 3px;
   border: none;
   outline: none;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   height: 3rem;
+  padding: 0.25rem;
 }
 
 #toDoDescriptionInput ::placeholder {

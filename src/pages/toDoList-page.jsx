@@ -4,17 +4,25 @@ import { v4 as uuidv4 } from "uuid";
 
 export function ToDoListAppPage() {
   const [tasks, setTask] = useState([
-    { task: "banana", description: "hello my name", id: uuidv4() },
+    { task: "banana", description: "hello my name", done: false, id: uuidv4() },
   ]);
   const [taskName, setTaskName] = useState("");
   const [taskdescription, setTaskdescription] = useState("");
   const clickHandler = () => {
     setTask([
       ...tasks,
-      { task: taskName, description: taskdescription, id: uuidv4() },
+      {
+        task: taskName,
+        description: taskdescription,
+        done: false,
+        id: uuidv4(),
+      },
     ]);
     setTaskName("");
     setTaskdescription("");
+  };
+  const toggleTask = (id) => {
+    setTask(tasks.map((t) => (t.id === id ? { ...t, done: !t.done } : t)));
   };
   return (
     <div className="toDoListAppContainer">
@@ -22,9 +30,15 @@ export function ToDoListAppPage() {
       <div className="toDoGradient2"></div>
       <div className="toDoListApp">
         <div className="toDoTitle">my list</div>
-        {tasks.map((item) => (
-          <ToDoListApp key={item.id} {...item} />
-        ))}
+        <div className="toDoTaskListContainer">
+          {tasks.map((item) => (
+            <ToDoListApp
+              key={item.id}
+              {...item}
+              toggleTask={() => toggleTask(item.id)}
+            />
+          ))}
+        </div>
         <form className="toDoInputForm">
           <input
             type="text"
