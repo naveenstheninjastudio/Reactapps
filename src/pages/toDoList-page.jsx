@@ -3,9 +3,7 @@ import { ToDoListApp } from "../components/toDoList";
 import { v4 as uuidv4 } from "uuid";
 
 export function ToDoListAppPage() {
-  const [tasks, setTask] = useState([
-    { task: "banana", description: "hello my name", done: false, id: uuidv4() },
-  ]);
+  const [tasks, setTask] = useState([]);
   const [taskName, setTaskName] = useState("");
   const [taskdescription, setTaskdescription] = useState("");
   const clickHandler = () => {
@@ -33,7 +31,7 @@ export function ToDoListAppPage() {
         <div className="toDoTaskListContainer">
           {tasks.map((item) => (
             <ToDoListApp
-              key={item.id}
+              key={item?.id}
               {...item}
               toggleTask={() => toggleTask(item.id)}
             />
