@@ -1,0 +1,122 @@
+.toDoGradient1 {
+  position: fixed;
+  top: 15vh;
+  left: 25vw;
+  background: linear-gradient(180deg, #9b22ea 0%, #bf23f6 100%);
+  height: 200px;
+  width: 200px;
+  border-radius: 999px;
+}
+
+.toDoGradient2 {
+  position: fixed;
+  top: 60vh;
+  left: 60vw;
+  background: linear-gradient(180deg, #ff512f 0%, #f09819 100%);
+  height: 200px;
+  width: 200px;
+  border-radius: 999px;
+}
+
+.toDoListApp {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.07);
+  z-index: 999;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(10px);
+  min-width: 40vw;
+  padding: 1rem;
+}
+.toDoTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.toDoInputForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.toDoTaskList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.25rem 0.5rem;
+}
+.toDoTaskBorder {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.toDoTaskInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.toDoDescription {
+  margin-left: 1.3rem;
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+#taskInput {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  margin-bottom: 0.8rem;
+  height: 2rem;
+}
+
+#taskInput ::placeholder {
+  color: #e5e5e5;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+#toDoDescriptionInput {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  margin-bottom: 0.25rem;
+  height: 3rem;
+}
+
+#toDoDescriptionInput ::placeholder {
+  color: #e5e5e5;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+#addTaskButton {
+  color: #080710;
+  background-color: #ffffff;
+  border-radius: 5px;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  border: none;
+  outline: none;
+}
+@media (max-width: 480px) {
+  .toDoListApp {
+    min-width: 85vw;
+  }
+  .toDoGradient1 {
+    top: 25vh;
+    left: -15vw;
+  }
+  .toDoGradient2 {
+    top: 55vh;
+    left: 70vw;
+  }
+}

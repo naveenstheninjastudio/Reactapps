@@ -9,6 +9,9 @@ export function Landing() {
       <a className="task" href="/weather-app">
         Weather App
       </a>
+      <a className="task" href="/todo-list-app">
+        ToDo list
+      </a>
     </div>
   );
 }
