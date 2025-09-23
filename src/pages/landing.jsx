@@ -12,6 +12,9 @@ export function Landing() {
       <a className="task" href="/todo-list-app">
         ToDo list
       </a>
+      <a className="task" href="/login-form">
+        Login form
+      </a>
     </div>
   );
 }
