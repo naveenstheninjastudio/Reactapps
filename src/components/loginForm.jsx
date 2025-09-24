@@ -10,6 +10,10 @@ export function LoginForm() {
   function handleLoginSubmit(event) {
     event.preventDefault();
     console.log(loginValues);
+    setloginValues({
+      email: "",
+      password: "",
+    });
   }
 
   function handleLoginChange(identifier, value) {
@@ -50,6 +54,9 @@ export function LoginForm() {
         </div>
         <button className="userLoginButton">login</button>
       </form>
+      <div className="signupPrompt">
+        Don't have an account? <a href="/signup-form">SignUp</a>
+      </div>
     </div>
   );
 }

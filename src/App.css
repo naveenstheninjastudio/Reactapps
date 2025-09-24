@@ -37,13 +37,6 @@ p {
   height: 100vh;
 }
 
-.loginFormContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .toDoListAppContainer {
   display: flex;
   flex-direction: column;
@@ -52,6 +45,21 @@ p {
   background-color: #1e1e1e;
   height: 100vh;
 }
+
+.loginFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signUpFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 @media (max-width: 480px) {
   .profileCardContainer {
     height: unset;
