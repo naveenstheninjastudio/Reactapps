@@ -7,6 +7,13 @@ export function LoginForm() {
     password: "",
   });
 
+  const [didEdit, setDidEdit] = useState({
+    email: false,
+    password: false,
+  });
+
+  const emailIsInvalid = didEdit.email && !loginValues.email.includes("@");
+
   function handleLoginSubmit(event) {
     event.preventDefault();
     console.log(loginValues);
@@ -14,12 +21,27 @@ export function LoginForm() {
       email: "",
       password: "",
     });
+    setDidEdit({
+      email: false,
+      password: false,
+    });
   }
 
   function handleLoginChange(identifier, value) {
     setloginValues((prevValues) => ({
       ...prevValues,
       [identifier]: value,
+    }));
+    setDidEdit((prevEdit) => ({
+      ...prevEdit,
+      [identifier]: false,
+    }));
+  }
+
+  function handleInputBlur(identifier) {
+    setDidEdit((prevEdit) => ({
+      ...prevEdit,
+      [identifier]: true,
     }));
   }
 
@@ -36,9 +58,14 @@ export function LoginForm() {
             type="email"
             name="email"
             id="userEmail"
+            onBlur={() => handleInputBlur("email")}
             onChange={(event) => handleLoginChange("email", event.target.value)}
             value={loginValues.email}
+            required
           />
+          <div className="userInputError">
+            {emailIsInvalid && <div>Please enter a valid email address.</div>}
+          </div>
         </div>
         <div className="userLoginInput">
           <label htmlFor="userPassword">password</label>
@@ -50,6 +77,8 @@ export function LoginForm() {
               handleLoginChange("password", event.target.value)
             }
             value={loginValues.password}
+            minLength={6}
+            required
           />
         </div>
         <button className="userLoginButton">login</button>

@@ -6,6 +6,7 @@ export function SignUpForm() {
     const fd = new FormData(event.target);
     const data = Object.fromEntries(fd.entries());
     console.log(data);
+    event.target.reset();
   }
   return (
     <div className="signUpForm">
@@ -16,19 +17,29 @@ export function SignUpForm() {
       <form className="userSignUpForm" onSubmit={handleSignUpSubmit}>
         <div className="userSignUpInput">
           <label htmlFor="first-name">First name</label>
-          <input type="text" name="first-name" id="first-name" />
+          <input type="text" name="first-name" id="first-name" required />
         </div>
         <div className="userSignUpInput">
           <label htmlFor="last-name">Last name</label>
-          <input type="text" name="last-name" id="last-name" />
+          <input type="text" name="last-name" id="last-name" required />
+        </div>
+        <div className="userSignUpInput">
+          <label htmlFor="age">Age</label>
+          <input type="number" name="age" id="age" />
         </div>
         <div className="userSignUpInput">
           <label htmlFor="userEmail">Email</label>
-          <input type="email" name="email" id="userEmail" />
+          <input type="email" name="email" id="userEmail" required />
         </div>
         <div className="userSignUpInput">
           <label htmlFor="userPassword">password</label>
-          <input type="password" name="password" id="userPassword" />
+          <input
+            type="password"
+            name="password"
+            id="userPassword"
+            minLength={6}
+            required
+          />
         </div>
         <button className="userSignUpButton">Register with us</button>
       </form>
