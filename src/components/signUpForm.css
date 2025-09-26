@@ -86,3 +86,16 @@ button:focus {
   color: #7a5af8;
   font-weight: 400;
 }
+
+@media (max-width: 480px) {
+  .signUpFormTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #100f14;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+}
