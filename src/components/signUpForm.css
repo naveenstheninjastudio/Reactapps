@@ -88,18 +88,22 @@ button:focus {
 }
 
 @media (max-width: 480px) {
+  .signUpForm {
+    padding: 2rem;
+  }
+
   .signUpFormTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #100f14;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
     text-transform: uppercase;
   }
 
   .signUpFormTitle p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
