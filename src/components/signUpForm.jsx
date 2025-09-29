@@ -1,12 +1,19 @@
+import { useState } from "react";
 import "./signUpForm.css";
 
 export function SignUpForm() {
+  const [passwordNotEqual, setPasswordNotEqual] = useState(false);
   function handleSignUpSubmit(event) {
     event.preventDefault();
     const fd = new FormData(event.target);
     const data = Object.fromEntries(fd.entries());
+    if (data.password !== data.confirmPassword) {
+      setPasswordNotEqual(true);
+      return;
+    }
     console.log(data);
     event.target.reset();
+    setPasswordNotEqual(false);
   }
   return (
     <div className="signUpForm">
@@ -40,6 +47,19 @@ export function SignUpForm() {
             minLength={6}
             required
           />
+        </div>
+        <div className="userSignUpInput">
+          <label htmlFor="userConfirmPassword">confirm password</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            id="userConfirmPassword"
+            minLength={6}
+            required
+          />
+        </div>
+        <div className="userInputError">
+          {passwordNotEqual && `password must match`}
         </div>
         <button className="userSignUpButton">Register with us</button>
       </form>

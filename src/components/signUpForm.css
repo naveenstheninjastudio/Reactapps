@@ -63,6 +63,12 @@ button:focus {
   text-transform: capitalize;
 }
 
+.userInputError {
+  padding: 0.15rem;
+  font-size: 0.75rem;
+  color: tomato;
+}
+
 .userSignUpButton {
   color: #ffffff;
   background-color: #7a5af8;
