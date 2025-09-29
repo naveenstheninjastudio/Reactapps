@@ -6,7 +6,7 @@ import { WeatherAppPage } from "./pages/weather-app-page";
 import { ToDoListAppPage } from "./pages/toDoList-page";
 import { LoginFormPage } from "./pages/login-form-page";
 import { SignUpFormPage } from "./pages/signUp-form-page";
-import { SignUpFormV2Page } from "./pages/signUp-formV2-page";
+import { SignUpFormV2Page } from "./pages/signUp-formv2-page";
 function App() {
   return (
     <div className="mainContainer">
