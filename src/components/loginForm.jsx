@@ -84,7 +84,7 @@ export function LoginForm() {
         <button className="userLoginButton">login</button>
       </form>
       <div className="signupPrompt">
-        Don't have an account? <a href="/signup-form">SignUp</a>
+        Don't have an account? <a href="/signup-formv2">SignUp</a>
       </div>
     </div>
   );
