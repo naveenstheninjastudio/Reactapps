@@ -15,6 +15,9 @@ export function Landing() {
       <a className="task" href="/login-form">
         Login form
       </a>
+      <a className="task" href="/github-profile-page">
+        Github profile card
+      </a>
     </div>
   );
 }

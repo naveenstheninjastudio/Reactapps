@@ -1,0 +1,129 @@
+.githubProfileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18rem;
+  min-height: 12rem;
+  color: #121212;
+  background: linear-gradient(
+    to bottom,
+    rgba(31, 37, 39, 0) 50%,
+    rgba(96, 107, 110, 0.56) 70%,
+    rgba(96, 107, 110, 0.4) 80%,
+    rgba(96, 107, 110, 0.3) 90%,
+    rgba(96, 107, 110, 0.2) 100%
+  );
+  margin: 1rem;
+  border: 0.5rem solid white;
+  border-radius: 2rem;
+  box-shadow: -40px 60px 150px 0 rgba(96, 107, 110, 0.7);
+}
+
+.githubProfileSearchBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1rem;
+  border-radius: 999px;
+  border: 0.7px solid #757575;
+}
+
+.gtihubSearchBarForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#username {
+  display: flex;
+  align-items: center;
+  background-color: transparent !important;
+  padding: 0.8rem;
+  font-size: 1rem;
+  color: #121212;
+  border: none;
+  outline: none;
+  flex: 14;
+}
+
+.githubSearchButton {
+  flex: 1;
+  width: 2rem;
+  margin-right: 0.25rem;
+  border: none;
+  background-color: transparent !important;
+}
+.githubSearchButton img {
+  width: 1.5rem;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 0.3rem;
+  filter: invert(50%);
+}
+
+.githubProfileImage {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.githubProfileImage img {
+  width: 100%;
+  object-position: center;
+  border-radius: 2rem;
+}
+
+.border {
+  border: 1px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.githubProfileInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.25rem 1rem 1.25rem;
+  gap: 0.75rem;
+}
+
+.githubProfileName {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.githubProfileBio {
+  font-size: 0.9rem;
+}
+
+.githubProfileStats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  gap: 1rem;
+  backdrop-filter: blur(10px);
+}
+.githubFollowerCount,
+.githubRepos {
+  display: flex;
+  flex-direction: row;
+  padding: 0.25rem;
+  gap: 0.25rem;
+  font-weight: 500;
+}
+
+.githubProfileLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  width: 6.8rem;
+  height: 2.75rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  background-color: #efefef;
+  border: 2px solid rgba(24, 24, 24, 0.3);
+}

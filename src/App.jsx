@@ -7,6 +7,7 @@ import { ToDoListAppPage } from "./pages/toDoList-page";
 import { LoginFormPage } from "./pages/login-form-page";
 import { SignUpFormPage } from "./pages/signUp-form-page";
 import { SignUpFormV2Page } from "./pages/signUp-formv2-page";
+import GithubProfileCard from "./pages/github-profile-page";
 function App() {
   return (
     <div className="mainContainer">
@@ -19,6 +20,10 @@ function App() {
           <Route path="/login-form" element={<LoginFormPage />}></Route>
           <Route path="/signup-form" element={<SignUpFormPage />}></Route>
           <Route path="/signup-formv2" element={<SignUpFormV2Page />}></Route>
+          <Route
+            path="/github-profile-page"
+            element={<GithubProfileCard />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </div>

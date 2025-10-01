@@ -59,6 +59,12 @@ p {
   align-items: center;
   height: 100vh;
 }
+.githubProfileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 @media (max-width: 480px) {
   .profileCardContainer {
