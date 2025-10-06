@@ -29,7 +29,7 @@
   border: 0.7px solid #757575;
 }
 
-.gtihubSearchBarForm {
+.githubSearchBarForm {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

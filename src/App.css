@@ -65,6 +65,12 @@ p {
   align-items: center;
   height: 100vh;
 }
+.movieAppContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
 @media (max-width: 480px) {
   .profileCardContainer {

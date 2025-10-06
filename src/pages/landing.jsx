@@ -18,6 +18,9 @@ export function Landing() {
       <a className="task" href="/github-profile-page">
         Github profile card
       </a>
+      <a className="task" href="/movie-search-page">
+        Movie search app
+      </a>
     </div>
   );
 }

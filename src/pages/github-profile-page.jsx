@@ -10,7 +10,6 @@ export default function GithubProfileCard() {
   const [githubUserData, setGithubUserData] = useState("");
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(`handlesubmit is working`);
     axios
       .get(`https://api.github.com/users/${githubUser}`)
       .then((response) => {
@@ -25,7 +24,7 @@ export default function GithubProfileCard() {
     <div className="githubProfileContainer">
       <div className="githubProfileCard">
         <div className="githubProfileSearchBar">
-          <form onSubmit={handleSubmit} className="gtihubSearchBarForm">
+          <form onSubmit={handleSubmit} className="githubSearchBarForm">
             <input
               type="text"
               placeholder="username"
