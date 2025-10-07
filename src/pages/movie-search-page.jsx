@@ -30,6 +30,12 @@ export default function MovieSearchApp() {
   }
   return (
     <div className="movieAppContainer">
+      {movieResults.length === 0 ? (
+        <div className="emptySearchPage">
+          <h1>Discover Movies</h1>
+          <p>Search for your next favorite story.</p>
+        </div>
+      ) : null}
       <div className="movieSearchBar">
         <form onSubmit={handleSubmit} className="movieSearchBarForm">
           <input
