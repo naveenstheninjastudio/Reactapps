@@ -1,0 +1,49 @@
+.movieSearchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  width: 100%;
+  background-color: #121212;
+}
+.movieSearchBarForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  width: 50vw;
+  border-radius: 5px;
+}
+
+#movieNameInput {
+  display: flex;
+  align-items: center;
+  background-color: transparent !important;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  flex: 14;
+}
+.movieSearchButton {
+  flex: 1;
+  width: 2rem;
+  border: none;
+  background-color: #ffffff !important;
+  border-radius: 5px;
+}
+
+.movieSearchButton img {
+  width: 1.5rem;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 0.3rem;
+  filter: invert(0.5);
+}
+
+@media (max-width: 480px) {
+  .movieSearchBarForm {
+    width: 90vw;
+  }
+}

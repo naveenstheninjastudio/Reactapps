@@ -35,7 +35,7 @@ export default function MovieSearchApp() {
           <input
             type="text"
             placeholder="enter movie name"
-            id="moviename"
+            id="movieNameInput"
             onChange={(e) => setMovieInput(e.target.value)}
             value={movieInput}
           />

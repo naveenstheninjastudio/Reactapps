@@ -67,8 +67,11 @@ p {
 }
 .movieAppContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  background-color: #000000;
+  color: #ffffff;
   min-height: 100vh;
 }
 
