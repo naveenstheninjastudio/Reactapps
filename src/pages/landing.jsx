@@ -21,6 +21,9 @@ export function Landing() {
       <a className="task" href="/movie-search-page">
         Movie search app
       </a>
+      <a className="task" href="/blog-page">
+        Blog page
+      </a>
     </div>
   );
 }

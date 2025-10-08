@@ -16,6 +16,7 @@ import { SignUpFormV2Page } from "./pages/signUp-formv2-page";
 import GithubProfileCard from "./pages/github-profile-page";
 import MovieSearchApp from "./pages/movie-search-page";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import BlogPage from "./pages/blog-page/infinite-blog-page";
 
 const queryClient = new QueryClient();
 function App() {
@@ -39,6 +40,7 @@ function App() {
               path="/movie-search-page"
               element={<MovieSearchApp />}
             ></Route>
+            <Route path="/blog-page" element={<BlogPage />}></Route>
           </Routes>
         </BrowserRouter>
       </div>
