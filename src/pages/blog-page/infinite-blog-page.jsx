@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import useInfiniteScroll from "react-infinite-scroll-hook";
 import BlogPost from "../../components/blogPost/blogPost";
 import "tailwindcss";
@@ -10,7 +10,7 @@ export default function BlogPage() {
   const [error, setError] = useState(null);
   const [hasNextPage, setHasNextPage] = useState(true);
 
-  async function loadMore() {
+  const loadMore = useCallback(async () => {
     try {
       setLoading(true);
       const res = await fetch(
@@ -20,13 +20,13 @@ export default function BlogPage() {
       setPage((p) => p + 1);
       setItems((prev) => [...prev, ...data]);
       setHasNextPage(data.length > 0);
-      console.log(items);
     } catch (error) {
       setError(error);
       console.log(error);
     }
     setLoading(false);
-  }
+  }, [page]);
+
   const [infiniteRef] = useInfiniteScroll({
     loading,
     hasNextPage,

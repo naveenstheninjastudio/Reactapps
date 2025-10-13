@@ -7,6 +7,6 @@ export async function fetchMovie(moviename) {
     );
     return response.data;
   } catch (err) {
-    throw new Error(`Error fetching movie data`);
+    throw new Error(`Error fetching movie data ${err.status}`);
   }
 }
