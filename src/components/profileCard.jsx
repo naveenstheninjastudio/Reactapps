@@ -1,9 +1,10 @@
 import "./profileCard.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 export function ProfileCard(props) {
   return (
     <div className="card">
       <div className="cardImg">
-        <img src={props.image} alt="" />
+        <LazyLoadImage src={props.image} alt="" />
       </div>
       <div className="cardContent">
         <div className="cardName">

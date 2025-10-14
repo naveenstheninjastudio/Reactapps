@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import useInfiniteScroll from "react-infinite-scroll-hook";
 import BlogPost from "../../components/blogPost/blogPost";
 import "tailwindcss";
@@ -33,10 +33,6 @@ export default function BlogPage() {
     onLoadMore: loadMore,
     disabled: Boolean(error),
   });
-
-  useEffect(() => {
-    loadMore();
-  }, []);
 
   return (
     <div className="flex flex-col justify-center items-center">
