@@ -24,6 +24,9 @@ export function Landing() {
       <a className="task" href="/blog-page">
         Blog page
       </a>
+      <a className="task" href="https://npropertydash.netlify.app/">
+        Property dashboard
+      </a>
     </div>
   );
 }
